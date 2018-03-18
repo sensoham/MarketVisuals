@@ -7,8 +7,8 @@ import plotly.graph_objs as go
 
 
 
-ts = TimeSeries(key='PJUU2VHAO4BAVEMU', output_format='pandas')
-data, meta_data = ts.get_intraday('BOMDYEING')
+ts = TimeSeries(key='', output_format='pandas')
+data, meta_data = ts.get_intraday('')   #put ticker here
 df_meta = meta_data
 df = data
 df.index = pd.to_datetime(df.index)
@@ -21,4 +21,3 @@ data = [trace]
 fig = go.Figure(data = data)
 plot(fig,show_link = False)
 
-##https://plot.ly/python/candlestick-charts/

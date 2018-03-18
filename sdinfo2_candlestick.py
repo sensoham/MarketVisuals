@@ -5,8 +5,8 @@ from alpha_vantage.timeseries import TimeSeries
 from finance import candlestick_ohlc
 import matplotlib.dates as mdates
 plt.style.use('ggplot')
-ts = TimeSeries(key='PJUU2VHAO4BAVEMU', output_format='pandas')
-data, meta_data = ts.get_intraday('BOMDYEING')
+ts = TimeSeries(key='', output_format='pandas')
+data, meta_data = ts.get_intraday('')  #put ticker here
 df_meta = meta_data
 df = data
 df.index = pd.to_datetime(df.index)
